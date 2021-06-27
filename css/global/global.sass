@@ -1,0 +1,466 @@
+*, html 
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    scroll-behavior: smooth
+
+body 
+    background: #FFFBF8
+    position: relative
+
+a 
+    text-decoration: none
+
+.navbar 
+    width: 100%
+    background: #3DBEFF
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    height: 80px
+    z-index: 10
+
+    .navbar-container 
+        height: 100%
+        display: flex
+        width: 95%
+        margin: auto
+        align-items: center
+        justify-content: space-between
+
+        .navbar-logo 
+            font-size: 30px
+            color: #fff
+            font-weight: 800
+
+        .navbar-menu 
+            cursor: pointer
+            padding: 10px
+            display: none
+    
+            .menu-lines
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                height: 25px
+                transition: 0.3s
+                width: 45px
+                transition: 0.3s 
+                position: relative
+
+                div
+                    height: 2px 
+                    width: 100%
+                    background: #fff
+                    transition: 0.3s
+
+        .navbar-menu-clicked
+            .menu-lines
+                height: 15px
+
+            .line-2
+                width: 0
+                opacity: 0
+
+        .navbar-items
+            list-style: none
+            display: flex
+            align-items: center
+
+            li 
+                margin: 0 25px
+                transition: 0.3s
+
+                .navbar-link 
+                    font-weight: 600
+                    color: #fff
+
+        
+            .btn-contact
+                padding: 15px 30px
+                background: #fff
+                font-weight: 600
+                color: #24303E
+                border-radius: 50px
+                transition: 0.3s ease
+
+                &:hover
+                    background: rgba(#fff, .5)
+                    color: #fff
+
+// --------------------------------------------------------------- MOBILE MENU --------------------------------------------------------------- //
+// --------------------------------------------------------------- MOBILE MENU --------------------------------------------------------------- //
+.mobile-menu-container
+    display: none
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    width: 90%
+    height: 400px
+    top: -500px
+    background: #fff
+    z-index: 100
+    transition: 1s ease
+    padding: 60px 0
+    box-shadow: 34px 35px 60px 14px rgba(0, 0, 0, 0.05)
+
+
+    &::before
+        content: ""
+        position: absolute
+        top: -30px
+        right: 0
+        width: 0
+        height: 0
+        border-bottom: 30px solid #fff
+        border-left: 25px solid transparent
+
+    .mobile-menu-list
+        list-style: none
+        display: flex 
+        flex-direction: column
+        height: 100%
+        justify-content: space-between
+        align-items: center
+
+        li 
+            a 
+                font-weight: 600
+                font-size: 25px
+                color: #7A7885
+
+            .btn-contact-mobile
+                text-transform: uppercase
+                padding: 15px 30px
+                background: #FBD601
+                font-weight: 600
+                color: #24303E
+                border-radius: 50px
+                transition: 0.3s ease
+
+                &:hover
+                    background: rgba(#FBD601, .7)
+
+.mobile-menu-show
+    animation: fadeFall 0.5s ease forwards
+
+    @keyframes fadeFall
+        0%
+            opacity: 0
+            top: -500px
+        100%
+            opacity: 1
+            top: 130px
+
+// --------------------------------------------------------------- SECTION HEADER --------------------------------------------------------------- //
+// --------------------------------------------------------------- SECTION HEADER --------------------------------------------------------------- //
+.header 
+    height: 100vh
+    position: relative
+    background: url(../images/desktop/image-header.jpg)
+    background-attachment: fixed
+    background-size: cover
+    background-position: center
+    width: 100%
+    overflow: hidden
+
+    .header-container 
+        position: absolute
+        width: max-content
+        top: 35%
+        left: 50%
+        transform: translate(-50%, -50%)
+
+        h1
+            font-size: 80px
+            font-weight: 600
+            letter-spacing: 2px
+            color: #fff
+            position: relative
+            padding-bottom: 80px
+            text-transform: uppercase
+
+            &::after
+                content: ""
+                display: block
+                background: url(../images/icon-arrow-down.svg)
+                height: 100%
+                width: 50px
+                background-position: center
+                background-repeat: no-repeat
+                position: absolute
+                left: 50%
+                bottom: -190px
+                transform: translateX(-50%)
+
+// --------------------------------------------------------------- SECTION FEATURE --------------------------------------------------------------- //
+// --------------------------------------------------------------- SECTION FEATURE --------------------------------------------------------------- //
+.section-feature
+    .flex-section 
+        display: flex
+        align-items: center
+
+        .bg-1 
+            background: url(../images/desktop/image-transform.jpg)
+
+        .bg-2 
+            background: url(../images/desktop/image-stand-out.jpg)
+
+        .bg-3 
+            background: url(../images/desktop/image-graphic-design.jpg)
+            background-position-y: 0 !important
+
+        .bg-4
+            background: url(../images/desktop/image-photography.jpg)
+            background-position-y: 0 !important
+
+        .flex-container
+            width: 50%
+            height: 75vh
+            min-height: 600px
+            background-size: cover !important
+            background-position: center
+            // background-attachment: fixed !important
+            // background-repeat: no-repeat
+
+        .container-message
+            padding: 0 8%
+            display: flex
+            flex-direction: column
+            justify-content: center
+
+            .message-title 
+                font-size: 50px
+                color: #24303E
+                margin-bottom: 30px
+
+            .message-title-mobile
+                display: none
+                font-size: 45px
+                color: #24303E
+                margin-bottom: 30px
+
+            .message-text
+                font-size: 25px
+                color: #A7A7A7
+                line-height: 1.5em
+                margin-bottom: 30px
+
+            // HOVER EFFECTS
+            a.btn-link 
+                text-transform: uppercase
+                font-size: 25px
+                color: #24303E
+                font-weight: 700
+                position: relative
+                letter-spacing: 1px
+                z-index: 1
+                width: max-content
+                cursor: pointer
+
+                &::before
+                    content: ""
+                    position: absolute
+                    z-index: -2
+                    height: 10px
+                    width: 108%
+                    transition: 0.3s ease
+                    border-radius: 5px
+                    bottom: 1px
+                    left: 50%
+                    transform: translateX(-50%)
+
+                &::after
+                    content: ""
+                    position: absolute
+                    z-index: -1
+                    height: 10px
+                    width: 0
+                    transition: 0.3s ease
+                    border-radius: 5px
+                    bottom: 1px
+                    left: 50%
+                    transform: translateX(-50%)
+
+                &:hover, &:active, &:focus
+                    &::after
+                        width: 108%
+
+            a.color-1 
+                &::before
+                    background: rgba(#FBD201, 0.3)
+                
+                &::after
+                    background: #FBD201
+
+            a.color-2 
+                &::before
+                    background: rgba(#FA6F5F, 0.3)
+
+                &::after
+                    background: #FA6F5F
+
+        .flex-end 
+            position: relative
+
+            div 
+                position: absolute
+                bottom: 8%
+                left: 50%
+                transform: translateX(-50%)
+
+                h3
+                    margin-bottom: .8em
+                    color:#24303E
+                    font-size: 35px
+
+                p 
+                    font-size: 22px
+                    line-height: 1.5em
+                    color: rgba(#24303E, 99%)
+
+                h3, p 
+                    text-align: center
+                
+
+// --------------------------------------------------------------- SECTION TESTIMONIALS --------------------------------------------------------------- //
+// --------------------------------------------------------------- SECTION TESTIMONIALS --------------------------------------------------------------- //
+.section-testimonials
+    padding: 15vh 0
+
+    .blocker
+        overflow: hidden
+        width: 360px
+        margin: auto
+
+    .container
+        width: 75%
+        max-width: 1450px
+        height: 100%
+        margin: auto
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        .client-container 
+            max-width: 460px
+
+            .client-img 
+                display: block
+                width: 100px
+                height: 100px
+                border-radius: 50%
+                margin: 40px auto
+
+            p 
+                text-align: center
+                font-size: 23px
+                color: #7A7885
+                font-weight: 500
+
+            .client-name
+                margin: 50px 0 15px 0
+                font-size: 25px
+                color: #24303E
+                text-align: center
+
+            .client-position 
+                font-size: 20px
+                color: #A7A7A7
+
+
+    .section-title
+        font-size: 25px
+        text-transform: uppercase
+        color: #A7A7A7
+        text-align: center
+        margin-bottom: 30px
+
+
+// --------------------------------------------------------------- SECTION GALLERY --------------------------------------------------------------- //
+// --------------------------------------------------------------- SECTION GALLERY --------------------------------------------------------------- //
+.section-gallery
+    position: relative
+    display: block
+    width: 100%
+    display: flex
+    overflow: hidden
+
+    .col.gallery-img-container 
+        width: 25%
+        overflow: hidden
+    
+        img 
+            width: 100%
+            height: 100%
+
+        .desktop-gallery
+            display: block
+
+
+// --------------------------------------------------------------- SECTION FOOTER --------------------------------------------------------------- //
+// --------------------------------------------------------------- SECTION FOOTER --------------------------------------------------------------- //
+.section-footer 
+    padding: 5vh 0
+    background: #90D4C5
+
+    .footer-logo 
+        display: block
+        text-align: center
+        font-size: 30px
+        color: #2B7264
+        font-weight: 800
+
+    .footer-nav-items 
+        margin: 30px 0 60px 0
+        display: block
+        display: flex
+        justify-content: center
+        align-items: center
+        list-style: none
+        
+
+        li 
+            margin: 0 25px
+
+            .footer-link
+                font-weight: 600
+                color: #2B7264
+                transition: 0.3s ease
+
+                &:hover
+                    color: #fff
+
+
+    .footer-icon-list
+        display: flex
+        justify-content: center
+        align-items: center
+        list-style: none
+
+        li 
+            margin: 0 10px
+
+            .icon-link-container
+                position: relative
+                height: 20px
+                width: 20px
+                
+                .non-hover 
+                    transition: 0.3s ease
+                    display: block
+                    z-index: 10
+                    height: 100%
+                    width: 100%
+
+                .hover 
+                    position: absolute
+                    left: 0
+                    top: 0
+                    z-index: 0
+
+
+                &:hover
+                    .non-hover
+                        opacity: 0 !important
