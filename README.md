@@ -1,8 +1,5 @@
 # Frontend Mentor - Sunnyside agency landing page
 
-Live link:
-https://loopstudiosno3challange.netlify.app/
-
 ![Design preview for the Sunnyside agency landing page coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
